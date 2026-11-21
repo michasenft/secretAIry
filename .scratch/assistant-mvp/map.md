@@ -22,9 +22,13 @@ MVP-Spec für SecretAIry als **Copilot-App-Plugin** (MCP-Server + Skills + Canva
 
 <!-- one line per closed ticket: - [title](issues/NN-slug.md): gist -->
 
+- [Copilot-Sessions über Windows ↔ WSL teilen?](issues/03-session-store-wsl-windows.md): getrennte Stores; Brücken sind Cloud-Sync (Policy nötig) und geteiltes Memory; am saubersten sind die „WSL hosts“ der App (experimentell)
+- [Was können Canvas-Extensions der Copilot App?](issues/02-canvas-extensions.md): reicht für Inbox, ToDo und Briefing auf dem Vault (Node-Extension mit eigenem localhost-Server, fs-Zugriff); Canvas läuft nur bei offener Session, API experimentell, ggf. als Plugin wegen Enterprise-Policy
+- [Wie kommt der Assistent an Outlook (M365-Firmenkonto)?](issues/04-outlook-zugriff-m365.md): Classic Outlook per COM als Windows-MCP (lesen, Entwürfe, Kalender, nie senden); Graph und Work IQ scheitern ohne Admin
+
 ## Not yet specified
 
-- Einsortieren-Ziele **Termin** und **Kontaktaufnahme**: Outlook-Kalender? Teams-Nachricht? Hängt am Outlook-/M365-Zugriff.
+- Einsortieren-Ziele **Termin** und **Kontaktaufnahme**: Kalender ist per COM erreichbar (Ticket 04). Ob Termine angelegt oder nur vorgeschlagen werden und wie „Kontakt“ aussieht (Mail-Entwurf? Teams?), ist noch offen.
 - **Automatischer Morgen-Lauf** des Briefings: lokales Scheduling (Task Scheduler + `copilot -p`? `/every`?), Cloud-Automations erreichen lokale Quellen nicht.
 - Globaler Windows-**Hotkey** für Capture.
 - **Plugin-Packaging/Distribution** (Plugin-Struktur, Installation auf dem Arbeits-PC aus diesem Repo).

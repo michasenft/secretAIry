@@ -24,3 +24,6 @@ build/
 
 *.log
 .DS_Store
+
+# Research findings live on research/* branches
+.scratch/*/research/
