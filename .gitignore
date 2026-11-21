@@ -1,0 +1,26 @@
+# Secrets & local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local-only tooling / personal context
+.remember/
+.github/copilot-instructions.md
+
+# Runtime data (never commit work data)
+data/
+
+# Python / Node artefacts
+.venv/
+__pycache__/
+*.py[co]
+*.egg-info/
+.pytest_cache/
+node_modules/
+dist/
+build/
+
+*.log
+.DS_Store
